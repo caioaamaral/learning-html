@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+
+.content-box {
+    display: block;
+    padding-left: 30px;
+    width: 50%;
+}
+
+.collapsible-item {
+    background-color: rgb(119, 119, 119);
+    color: white;
+    text-align: left;
+    font-size: 14px;
+    border: none;
+    padding: 18px 20px;
+    width: 100%;
+}
+
+.collapsible-item::after {
+    content: "+";
+    float: right;
+}
+
+.collapsible-item:hover, .collapsible-item.pressed {
+    background-color: rgb(85, 85, 85);
+}
+
+.collapsible-item.pressed::after {
+    content: "−";
+    float: right;
+}
+
+.collapsible-content {
+    background-color: rgb(240, 240, 240);
+    max-height: 500px;
+    overflow: hidden;
+    font-size: 14px;
+    padding: 0 20px;
+    transition: max-height 0.2s ease-out;
+}
+
+.collapsible-content.hidden {
+    max-height: 0;
+}
